@@ -26,7 +26,7 @@ class MasterViewController: UITableViewController {
                 let json = JSON(data: data)
                 
                 if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                    // we're ok to parse!
+                    parseJSON(json)
                 }
             }
         }
@@ -41,6 +41,18 @@ class MasterViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func parseJSON(json: JSON) {
+        for result in json["results"].arrayValue {
+            let title = result["title"].stringValue
+            let body = result["body"].stringValue
+            let sigs = result["signatureCount"].stringValue
+            let obj = ["title": title, "body": body, "signatureCount": sigs]
+            objects.append(obj)
+        }
+        
+        tableView.reloadData()
     }
 
     
