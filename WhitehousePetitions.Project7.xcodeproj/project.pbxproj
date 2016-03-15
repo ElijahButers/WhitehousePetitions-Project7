@@ -13,6 +13,7 @@
 		E2E614E51C9807E300332850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E614E31C9807E300332850 /* Main.storyboard */; };
 		E2E614E71C9807E300332850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E614E61C9807E300332850 /* Assets.xcassets */; };
 		E2E614EA1C9807E300332850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E614E81C9807E300332850 /* LaunchScreen.storyboard */; };
+		E2E614F21C982E8C00332850 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E614F11C982E8C00332850 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E2E614E61C9807E300332850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2E614E91C9807E300332850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2E614EB1C9807E300332850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E614F11C982E8C00332850 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E2E614DD1C9807E300332850 /* AppDelegate.swift */,
 				E2E614DF1C9807E300332850 /* MasterViewController.swift */,
 				E2E614E11C9807E300332850 /* DetailViewController.swift */,
+				E2E614F11C982E8C00332850 /* SwiftyJSON.swift */,
 				E2E614E31C9807E300332850 /* Main.storyboard */,
 				E2E614E61C9807E300332850 /* Assets.xcassets */,
 				E2E614E81C9807E300332850 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				E2E614E21C9807E300332850 /* DetailViewController.swift in Sources */,
 				E2E614E01C9807E300332850 /* MasterViewController.swift in Sources */,
 				E2E614DE1C9807E300332850 /* AppDelegate.swift in Sources */,
+				E2E614F21C982E8C00332850 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
