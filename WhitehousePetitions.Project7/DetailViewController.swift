@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController {
+    
+    var webView: WKWebView!
+    var detailItem: [String: String]!
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
-    var detailItem: AnyObject? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
+    
+    override func loadView() {
+        
+        webView = WKWebView()
+        view = webView
     }
 
     func configureView() {
