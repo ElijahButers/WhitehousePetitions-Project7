@@ -18,19 +18,13 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+        let urlString: String
         
-        if let url = NSURL(string: urlString) {
-            if let data = try? NSData(contentsOfURL: url, options: []) {
-                
-                let json = JSON(data: data)
-                
-                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                    parseJSON(json)
-                }
-            }
+        if navigationController?.tabBarItem.tag == 0 {
+            urlString = "https://api.whitehouse.gov/v1/petitons.json?limit=100"
+        } else {
+            urlString = "https://api.whitehouse.gov/v1/petitons.json?signaturecountFloor=10000&limit=100"
         }
-        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -54,6 +48,8 @@ class MasterViewController: UITableViewController {
         
         tableView.reloadData()
     }
+    
+    
 
     
     // MARK: - Segues
