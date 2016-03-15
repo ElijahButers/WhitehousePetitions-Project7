@@ -49,7 +49,12 @@ class MasterViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    
+    func showError() {
+        
+        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
+    }
 
     
     // MARK: - Segues
