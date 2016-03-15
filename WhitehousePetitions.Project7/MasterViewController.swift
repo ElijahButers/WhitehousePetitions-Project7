@@ -23,7 +23,7 @@ class MasterViewController: UITableViewController {
         if navigationController?.tabBarItem.tag == 0 {
             urlString = "https://api.whitehouse.gov/v1/petitons.json?limit=100"
         } else {
-            urlString = "https://api.whitehouse.gov/v1/petitons.json?signaturecountFloor=10000&limit=100"
+            urlString = "https://api.whitehouse.gov/v1/petitons.json?signatureСountFloor=10000&amp;limit=100"
         }
     }
 
