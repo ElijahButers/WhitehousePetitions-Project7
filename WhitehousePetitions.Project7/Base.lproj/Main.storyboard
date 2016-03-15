@@ -9,7 +9,7 @@
         <scene sceneID="pY4-Hu-kfo">
             <objects>
                 <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="n3B-Oz-OXr"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="n3B-Oz-OXr"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
