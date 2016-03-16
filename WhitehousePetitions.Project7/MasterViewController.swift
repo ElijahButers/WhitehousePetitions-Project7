@@ -21,9 +21,25 @@ class MasterViewController: UITableViewController {
         let urlString: String
         
         if navigationController?.tabBarItem.tag == 0 {
-            urlString = "https://api.whitehouse.gov/v1/petitons.json?limit=100"
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
         } else {
-            urlString = "https://api.whitehouse.gov/v1/petitons.json?signatureСountFloor=10000&amp;limit=100"
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&amp;limit=100"
+        }
+        
+        if let url = NSURL(string: urlString) {
+            if let data = try? NSData(contentsOfURL: url, options: []) {
+                let json = JSON(data: data)
+                
+                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+                    parseJSON(json)
+                } else {
+                    showError()
+                }
+            } else {
+                showError()
+            }
+        } else {
+            showError()
         }
     }
 
